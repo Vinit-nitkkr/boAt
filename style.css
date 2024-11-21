@@ -1,0 +1,656 @@
+*{
+margin:0%;
+padding:0%;
+ box-sizing:border-box;
+ font-family: sans-serif,'Times New Roman', Times;
+}
+.sales-head{
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #eff4f7;
+    z-index: 2;
+}
+.sales-head a{
+    text-decoration: none;
+    display: inline-block;
+    margin: .5rem 2rem;
+    color: black;
+    font-size: .7rem;
+    font-weight: 500;
+}
+.navbar-container{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:36px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    z-index: 2;
+}
+.navbar-container .navbar-item1{
+    margin:1.4rem 2rem;
+    flex: 1.8;
+}
+.navbar-item1 img{
+    height: 2rem;
+}
+.navbar-item1 li{
+   list-style:  none;
+   margin: 0 1rem;
+   flex: 1;
+   position: relative;
+}
+
+.categories a , .more a{
+    display: flex;
+    align-items: center;
+}
+.categories a img , .more a img{
+   height: 1.4rem;
+}
+
+.navbar-item1 .personalization,.orders,.categories{
+    min-width: fit-content;
+} 
+.navbar-item1 li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.837);
+    font-size: .9rem;
+    letter-spacing: 0.8px;
+}
+.navbar-item1 .categories:hover::after{
+    content: "";
+    position: absolute;
+    border-bottom: 2.5px solid rgb(211, 12, 12);
+    width: 25px;
+    left:35px;
+    transition: width .4s ease ;
+    -webkit-transition: width .4s ease ;
+    -moz-transition: width .4s ease ;
+    -ms-transition: width .4s ease ;
+    -o-transition: width .4s ease ;
+}
+.navbar-item1 .categories:hover,.personalization:hover,.orders:hover,.more:hover{
+    font-weight: bolder;
+    transition: font-weight .5s ease ;
+    -webkit-transition: font-weight .5s ease ;
+    -moz-transition: font-weight .5s ease ;
+    -ms-transition: font-weight .5s ease ;
+    -o-transition: font-weight .5s ease ;
+}
+.navbar-item1 .personalization:hover::after,.orders:hover::after,.more:hover::after{
+    content: "";
+    position: absolute;
+    border-bottom: 2.5px solid rgb(211, 12, 12);
+    width: 25px;
+    left:56px;
+    bottom: -2px;
+}
+.navbar-item1 .more:hover::after{
+    content: "";
+    position: absolute;
+    border-bottom: 2.5px solid rgb(211, 12, 12);
+    width: 25px;
+    left:13px;
+}
+.navbar-item1 ul,.navbar-item2{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-item2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbar-item2 input{
+    display: inline-block;
+    background-color: #f4f5f7;
+    height: 6vh;
+    border: none;
+    padding-left: 2rem;
+    width: 250px;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+.navbar-item2 input::placeholder{
+    font-size: .9rem;
+    color: black;
+    opacity: 0.8;
+}
+.navbar-item2 img{
+    height: 1.5rem;
+    opacity: .6;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+.navbar-item2 .search{
+    display: flex;
+    align-items: center;
+}
+.navbar-item2 .search img{
+    position: relative;
+    left: 40px;
+    height: 27px;
+   
+}
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color:rgb(237, 254, 254);
+    padding: 1rem 2rem;
+}
+.hero-container .infoabt-img img{
+    height: 36rem; 
+    width: 100%;
+    flex: 1;
+}
+.info{
+    margin-right: 2.5rem;
+    opacity: .92;
+}
+.info h1{
+    font-size: 5rem;
+    font-weight: normal;
+}
+.info h2{
+    font-size: 5rem;
+}
+.info .price{
+    font-weight: normal;
+    font-size: 2rem;
+    margin: 1rem 0 1.4rem 0;
+}
+.info a{
+    display: inline-block;
+    height: 5.5vh;
+    font-size: 16px;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color:#000;
+    font-weight: 600;
+    width: 12.2rem;
+    color: #fff;
+    border-radius:8px ;
+    text-decoration: none;
+    -webkit-border-radius:8px ;
+    -moz-border-radius:8px ;
+    -ms-border-radius:8px ;
+    -o-border-radius:8px ;
+}
+.info a img{
+    height: 18px;
+    margin-left:6px ;
+}
+.info .best-sellers{
+    position: absolute;
+    bottom: -2px;
+    font-size: 2rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+.info .best-sellers span{
+    font-weight:bolder;
+}
+.info .best-sellers::after{
+    content: "";
+    position: absolute;
+    border-bottom: 2.5px solid rgb(211, 12, 12);
+    width: 25px;
+    right:1px;
+    bottom: 0;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 0.7rem;
+    padding: 0 2rem;
+    margin-top: 0.5rem;
+    background-image: linear-gradient(rgb(237, 254, 254),#fff);
+}
+.card-container .card{
+    background-color: rgba(239, 237, 237, 0.899);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card-container .card img{
+   height: 230px;
+   width: 100%;
+   border-radius: 10px;
+   position: relative;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.card-container .card-image{
+    position: relative;
+}
+.card-image .avlble-facility{
+    font-size: .6rem;
+    font-weight: 700;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    background-color: #000;
+    padding: 3px 5px;
+    border-radius: 10px 5px 5px 0;
+    -webkit-border-radius: 10px 5px 5px 0;
+    -moz-border-radius: 10px 5px 5px 0;
+    -ms-border-radius: 10px 5px 5px 0;
+    -o-border-radius: 10px 5px 5px 0;
+}
+.duration{
+    background-color: #fcc50b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px .7rem;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    gap: 5px;
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+}
+.duration p{
+    font-size: .6rem;
+    font-weight: 700;
+}
+.rating{
+    background-color: #fff;
+    font-size: 12px;
+    padding: 1px 4px;
+    min-width:fit-content;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.rating span{
+ color: #fcc50b;
+}
+.card .product-name{
+  margin: .8rem 12px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.option h3{
+    font-size: 1.2rem;
+    margin: .8rem 12px;
+}
+.card .original-price{
+    margin: 0 12px 1.2rem;
+    font-size: 11px;
+    color: #888282;
+}
+.original-price span{
+    color: rgb(14, 148, 106);
+}
+.smart-watch{
+    background-image: linear-gradient(rgb(255, 244, 222),white);
+    position: relative;
+    z-index: -1;
+}
+.smart-watch .info{
+    order: 1;
+}
+.smart-watch .info h3{
+    left:2rem;
+}
+.neck-band {
+    position: relative;
+    background-image: linear-gradient(#fff,rgb(245, 241, 255));
+    z-index: -1;
+}
+.headphone {
+    background-image: linear-gradient(rgb(253, 254, 254),rgb(231, 242, 240));
+    position: relative;
+    z-index: -1;
+}
+.headphone .info{
+    order: 1;
+}
+.headphone .info .best-sellers{
+    left: 2rem;
+}
+.wireless-speaker{
+    position: relative;
+    background-image: linear-gradient(rgb(250,250,250),rgb(238, 242, 255));
+    z-index: -1;
+}
+.duration .rating{
+    font-size: 10px;
+}
+.party-speaker {
+    background-image: linear-gradient(rgb(253, 252, 250),rgb(238, 225, 207));
+    position: relative;
+    z-index: -1;
+}
+.party-speaker .info .best-sellers{
+    left: 2rem;
+}
+.party-speaker .info{
+    order: 1;
+}
+.sound-bars {
+    background-image: linear-gradient(rgb(254,252,252),rgb(243, 229, 229));
+    position: relative;
+    z-index: -1;
+}
+.sound-bars .info .best-sellers{
+    left: 2rem;
+}
+.footer-img{
+    margin: 2rem;  
+    display: block;
+}
+.footer-img img{
+    height: 20vh;
+    width: 100%;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.footer-container{
+    width: 100%;
+    padding: 0.8rem;
+    background-color:#EFF4F7;
+}
+.subs-container{
+    display: grid;
+    width: 100%;
+    padding: 2.6rem 4rem;
+    grid-template-columns: 2fr 1.5fr  repeat(2,1fr);
+    background-color: #E7F0F5;
+    gap: 15px;
+}
+.subs h3{
+    font-size: 1.5rem;
+    margin: 1.2rem 0 .8rem ;
+}
+.subs input{
+    height: 7vh;
+    width: 80%;
+    border: none;
+    padding:0 20px 0 15px ;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.subs .email{
+    display: flex;
+    align-items: center;
+}
+.subs .email img{
+    position: relative;
+    right: 40px;
+    opacity: .4;
+
+}
+.box{
+    margin:0 .5rem;
+}
+.box h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.box-container li{
+    list-style: none;
+    margin: 0.64rem 0;
+}
+.box-container a{
+    text-decoration: none;
+    font-size:13px;
+    color: #000;
+}
+.box-container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 10px;
+}
+.help,.company{
+  display: block;
+  margin: 0 1.2rem ;
+}
+.company{
+    margin-bottom: 1.2rem;
+}
+.more-info{
+   display: block;
+   text-align: center;
+  
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.more-info .social-media, .social-media ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 32px;
+}
+.terms ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: .7rem;
+    margin: 2rem 0 1.2rem;
+}
+.more-info .copy-write {
+    font-size: .7rem;
+    margin: 1.4rem 0;
+    opacity: .4;
+}
+.more-info .location{
+    font-size: .7rem;
+    opacity: .4;
+}
+.social-media img{
+    height: 18px;
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    html{
+        font-size: 15px;
+    }
+    .navbar-container{
+        flex-direction: column;
+        padding-bottom: 1rem;
+    } 
+}
+@media (min-width:640px) and (max-width: 980px) {
+    html{
+        font-size: 14px;   
+    }
+    .hero-container {
+       flex-direction: column;
+       gap: 10px;
+       position: relative;
+    }
+    .earbuds .info,.neck-band .info ,.wireless-speaker .info,.sound-bars .info{
+        order: 1;
+    }
+    .earbuds .info,.neck-band .info ,.wireless-speaker .info,.sound-bars .info,.smart-watch .info,.headphone .info,.party-speaker .info{
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 0;
+        width: 100%;
+    }
+    .earbuds .info .best-sellers, .smart-watch .info .best-sellers,.headphone .info .best-sellers,.party-speaker .info .best-sellers, .neck-band .info .best-sellers,.wireless-speaker .info .best-sellers,  .sound-bars .info .best-sellers{
+        position: absolute;
+        left: 0rem;
+        bottom: -0.6rem;
+    }
+    .card-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .subs-container{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .subs-container .subs{
+        grid-column: span 4;
+        margin-bottom: 2rem;
+    }
+    .subs-container .box{
+        grid-column: span 2;
+        margin-bottom: 2rem;
+    }
+   .subs-container .box-container{
+    justify-content: flex-start;
+    gap: 40px;
+   }
+}
+@media (min-width :500px) and (max-width:640px) {
+    .navbar-container{
+        flex-direction: column;
+        padding-bottom: 1rem;
+    } 
+    .infoabt-img img{
+        height: 25rem !important;
+    }
+    .navbar-item1 .categories,.personalization,.orders,.more{
+       display: none;
+    }
+    .info h1{
+        font-size: 2.5rem !important ;
+    }
+    .info h2{
+        font-size: 2.5rem !important ;
+    }
+    .info h3{
+        font-size: 1.5rem !important ;
+    }
+    .navbar-container .navbar-item1 .img-logo{
+        display: block;
+    }
+    .hero-container {
+       flex-direction: column;
+       gap: 10px;
+       position: relative;
+    }
+
+    .earbuds .info,.neck-band .info ,.wireless-speaker .info,.sound-bars .info{
+        order: 1;
+    }
+    .earbuds .info,.neck-band .info ,.wireless-speaker .info,.sound-bars .info,.smart-watch .info,.headphone .info,.party-speaker .info{
+        padding-bottom: 5rem;
+        display: flex;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+    .earbuds .info .best-sellers, .smart-watch .info .best-sellers,.headphone .info .best-sellers,.party-speaker .info .best-sellers, .neck-band .info .best-sellers,.wireless-speaker .info .best-sellers,  .sound-bars .info .best-sellers{
+        position: absolute;
+        left: 0rem;
+        bottom: -0.6rem;
+    }
+    .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .subs-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .subs-container .box,.help,.company{
+        margin-left: 0;
+    }
+    .subs-container .box{
+        margin-top: 1rem;
+    }
+   
+}
+@media  (max-width:500px) {
+    .navbar-container{
+        flex-direction: column;
+        padding-bottom: 1rem;
+    } 
+    .infoabt-img img{
+        height: 20rem !important;
+    }
+    .navbar-item1 .categories,.personalization,.orders,.more{
+       display: none;
+    }
+    .info h1{
+        font-size: 2.5rem !important ;
+    }
+    .info h2{
+        font-size: 2.5rem !important ;
+    }
+    .info h3{
+        font-size: 1.5rem !important ;
+    }
+    .navbar-container .navbar-item1 .img-logo{
+        display: block;
+    }
+    .hero-container {
+       flex-direction: column;
+       gap: 10px;
+       position: relative;
+    }
+
+    .earbuds .info,.neck-band .info ,.wireless-speaker .info,.sound-bars .info{
+        order: 1;
+    }
+    .earbuds .info,.neck-band .info ,.wireless-speaker .info,.sound-bars .info,.smart-watch .info,.headphone .info,.party-speaker .info{
+        padding-bottom: 5rem;
+        display: flex;
+        margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+    .earbuds .info .best-sellers, .smart-watch .info .best-sellers,.headphone .info .best-sellers,.party-speaker .info .best-sellers, .neck-band .info .best-sellers,.wireless-speaker .info .best-sellers,  .sound-bars .info .best-sellers{
+        position: absolute;
+        left: 0rem;
+        bottom: -0.6rem;
+    }
+    .card-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .subs-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .subs-container .box,.help,.company{
+        margin-left: 0;
+    }
+    .subs-container .box{
+        margin-top: 1rem;
+    }
+   
+}
